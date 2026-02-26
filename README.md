@@ -1,6 +1,6 @@
 Orbital Exhaustion is a constructive computational framework for the analytic continuation of functional iteration. The core philosophy of the engine is to exhaust all data and complexity of global iteration by decomposing it into discrete orbital mechanics and local analytic propagation. This repository implements numerical methods for solving such transcendental functional equations, currently focusing on parabolic tetration.
 
-Traditional methods often struggle with the functional equation $f(z+1)=e^{\frac{f(z)}{e}}$ near the parabolic fixed point $z=e$ where $f'(e)=1$. This engine, however,  exploits that if the recursion $f(z+1)={\Upsilon}\circ{f(z)}$ holds globally for all $z$, then the following:
+Traditional methods often struggle with the functional equation $f(z+1)={\Upsilon}(f(z))=e^{\frac{f(z)}{e}}$ near the parabolic fixed point $z=e$ where ${\Upsilon}'(e)=1$. This engine, however,  exploits that if the recursion $f(z+1)={\Upsilon}\circ{f(z)}$ holds globally for all $z$, then the following:
 
 $$P(z)=\prod_{t=a}^{z-1}{\Upsilon}'\circ{f(t)}=\frac{f'(z)}{f'(a)}$$
 $$\frac{P'(z)}{P(z)}=\frac{P'(z+n)}{P(z+n)}-f'(a)\sum_{t=0}^{n-1}{\frac{{\Upsilon}''\circ{f(z+t)}}{{\Upsilon}'\circ{f(z+t)}}P(z+t)}$$
